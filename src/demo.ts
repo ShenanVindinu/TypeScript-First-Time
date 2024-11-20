@@ -20,3 +20,4 @@ function printArray(ar : number[]){
 
 // printArray(ar1); // since type of array in the function is number type we can't pass ar1 as an argument
 printArray(ar2);
+
