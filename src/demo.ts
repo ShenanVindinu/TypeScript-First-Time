@@ -1,11 +1,22 @@
-function add(a: number, b: number) {
-    return a + b;
+let ar = []; // never type array
+
+let ar1 = ['a', 'b', 'c']; // string type array
+let ar2 = [1, 2, 3, 4, 5];  // number type array
+let ar3 = [1, 'b', false];  // any type array
+
+let ar4 = Array<string>
+
+let ar5 : string[];
+
+ar1.forEach((e) =>(
+    console.log(e)
+));
+
+function printArray(ar : number[]){
+    ar.forEach(element => {
+        console.log(element)
+    });
 }
 
-console.log('hello world', add(1, 2));
-
-let sum: number = 0;
-let sum1: number | boolean = true;
-let sum2: number | boolean | string = "shenan";
-
-console.log(sum, sum1, sum2);
+// printArray(ar1); // since type of array in the function is number type we can't pass ar1 as an argument
+printArray(ar2);
